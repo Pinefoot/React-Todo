@@ -10,7 +10,7 @@ class App extends React.Component {
  
  constructor(){
    super();
-   this.state={ TodosList: [{
+   this.state={ todosList: [{
      task: '',
      id: '',
      complete: false,
@@ -19,14 +19,36 @@ class App extends React.Component {
 
  addTodo = (todo) => {
   this.setState({
-      TodosList: [...this.state.TodosList, todo]
+      todosList: [...this.state.todosList, todo]
   })
   console.log(todo);
 }
+
+// removeComplete = (item) => {
+//   const newTodos = this.state.todosList.filter(todosList =>{
+//     return todosList == true;
+//   })
+//   this.setState({
+//     todosList: [ ...todosList, newTodos]
+//   })
+
+//  console.log('this is a function being passed down')
+// }
+
+removeComplete=()=>{
+  this.setState({
+    todosList: this.state.todosList.filter((todosList)=>{
+      return todosList.complete !==true;
+    })
+    
+  })
+  console.log('this has been fired');
+}
+
  
 toggleComplete = (id) => {
   this.setState({
-      TodosList: this.state.TodosList.map(todo =>{
+      todosList: this.state.todosList.map(todo =>{
           if (todo.id === id){
               //this is where the update occurs
               return{
@@ -47,8 +69,14 @@ toggleComplete = (id) => {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoForm onSubmit = {this.addTodo}/>
-        <TodoList todo = {this.state.TodosList} toggleComplete = {this.toggleComplete}/>
+        <TodoForm onSubmit = {this.addTodo}
+        />
+        <TodoList todo = {this.state.todosList}
+         toggleComplete = {this.toggleComplete}
+         />
+
+      <button onClick={this.removeComplete}>Clear</button>
+
       </div>
     );
   }

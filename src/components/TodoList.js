@@ -23,6 +23,7 @@ export default class TodoList extends React.Component {
                 key={todo.id} 
                 toggleComplete = {this.props.toggleComplete}
                 task={todo}
+                removeComplete = {this.props.removeComplete}
                 
                 
 

@@ -26,6 +26,15 @@ export default class TodoForm extends React.Component {
         })
     }
 
+    // handleRemove = (event) =>{
+    //     event.preventDefualt();
+    //     this.props.removeComplete({
+    //         task: '',
+    //         id: '',
+    //         complete: true,
+    //     })
+    // }
+
     render(){
         return (
         <form onSubmit = {this.handleSubmit}>
@@ -37,6 +46,7 @@ export default class TodoForm extends React.Component {
             />
             <button onClick={this.handleSubmit}>Add Task</button>
             {/* <button>Remove Task</button> */}
+            {/*  */}
             
         </form>
         
