@@ -21,6 +21,9 @@ export default class TodoForm extends React.Component {
             id:  Date.now(),
             complete: false,
         });
+        this.setState({
+            task: ''
+        })
     }
 
     render(){
@@ -33,7 +36,7 @@ export default class TodoForm extends React.Component {
             placeholder="add To Do here"
             />
             <button onClick={this.handleSubmit}>Add Task</button>
-            <button>Remove Task</button>
+            {/* <button>Remove Task</button> */}
         </form>
         
         )   
