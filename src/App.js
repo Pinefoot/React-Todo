@@ -1,7 +1,19 @@
 import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
-import Todo from './components/Todo';
+import img from './img/vaporwave2.jpg';
+import styled from 'styled-components';
+import "./components/Todo.css";
+
+
+const Content = styled.div`
+    border: 1px solid #000;
+    background-image: url(${img});
+    width: 100%;
+    height: 200vh;
+`;
+
+
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -67,17 +79,17 @@ toggleComplete = (id) => {
  
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <Content className="appdiv">
+        <h2 className="intro">Todo List</h2>
         <TodoForm onSubmit = {this.addTodo}
         />
         <TodoList todo = {this.state.todosList}
          toggleComplete = {this.toggleComplete}
          />
 
-      <button onClick={this.removeComplete}>Clear</button>
+      <button className ="clr-btn" onClick={this.removeComplete}>Clear</button>
 
-      </div>
+      </Content>
     );
   }
 }

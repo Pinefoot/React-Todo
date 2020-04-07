@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Button} from 'reactstrap';
 //form lives on this component
 
 export default class TodoForm extends React.Component {
@@ -37,14 +37,14 @@ export default class TodoForm extends React.Component {
 
     render(){
         return (
-        <form onSubmit = {this.handleSubmit}>
+        <form className = "main-form" onSubmit = {this.handleSubmit}>
         <input 
             name = "task"
             value={this.state.task} 
             onChange={this.handleChange}
             placeholder="add task here"
             />
-            <button onClick={this.handleSubmit}>Add Task</button>
+            <Button className = "btn-add" color="warning" onClick={this.handleSubmit}>Add Task</Button>
             {/* <button>Remove Task</button> */}
             {/*  */}
             
