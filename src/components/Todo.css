@@ -16,8 +16,25 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 0 auto;
+   
+    border-radius: 11px;
+    
+    width: 15%;
+    box-shadow: 3px 4px black;
+    background-color: rgb(184, 184, 184);
+    border: none;
+    margin-bottom: 2%;
+    font-size: 1.25rem;
+    font-family: 'Reenie Beanie', cursive;
 
+
+}
+
+.btn-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .appdiv{
@@ -32,8 +49,8 @@
 h2{
     font-family: 'Nothing You Could Do', cursive;
     font-size: 7rem;
-    color: #22eae0;
-    text-shadow: orange 3px 3px;
+    color: #8c1eff;
+    text-shadow: #ff901f 3px 6px;
     transform: rotate(-15deg);
 }
 

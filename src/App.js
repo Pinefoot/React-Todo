@@ -87,7 +87,7 @@ toggleComplete = (id) => {
          toggleComplete = {this.toggleComplete}
          />
 
-      <button className ="clr-btn" onClick={this.removeComplete}>Clear</button>
+      <button className ="clr-btn" onClick={this.removeComplete}>CLEAR COMPLETED</button>
 
       </Content>
     );
