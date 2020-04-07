@@ -33,10 +33,11 @@ export default class TodoForm extends React.Component {
             name = "task"
             value={this.state.task} 
             onChange={this.handleChange}
-            placeholder="add To Do here"
+            placeholder="add task here"
             />
             <button onClick={this.handleSubmit}>Add Task</button>
             {/* <button>Remove Task</button> */}
+            
         </form>
         
         )   

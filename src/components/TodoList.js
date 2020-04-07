@@ -5,14 +5,17 @@ import Todo from './Todo';
 
 export default class TodoList extends React.Component {
     state ={
-        todos: []
+        todos: [],
+        
     }
 
     
-
+    
     
 
     render(){
+        
+        
         return(
              <div>
              {this.props.todo.map(todo => (

@@ -18,15 +18,16 @@ const Todo = props => {
    const toggleClass = props.task.complete ? 'completed' : ''
    console.log(props.task.complete);
     return(
-    <div>
+    <div className = {toggleClass}
+     onClick={()=> props.toggleComplete(props.task.id)}>
+            {props.task.task}
+    
     
         
-        <p className = {toggleClass}
-            onClick={()=> props.toggleComplete(props.task.id)}>
-            {props.task.task}
-            </p>
-        {/* {console.log (props)} */}
+
+    {/* <button onClick={}>Clear Completed</button> */}
     </div>
+    
     
     )
     
